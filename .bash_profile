@@ -23,6 +23,9 @@ alias vstatus='( cd ~/vagrant-local ; vagrant status )'
 alias whois="whois -h whois.internic.net"
 alias rmdir="rm -rf"
 
+# git commands
+alias gs='git status'
+
 # Show month's calendar with today highlighted
 alias cal="cal | grep -E --color '\b`date +%e`\b|$'"
 
