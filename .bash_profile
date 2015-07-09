@@ -24,7 +24,8 @@ alias whois="whois -h whois.internic.net"
 alias rmdir="rm -rf"
 
 # git commands
-alias gs='git status'
+alias gs="git status"
+alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset%n' --abbrev-commit | cat"
 
 # Show month's calendar with today highlighted
 alias cal="cal | grep -E --color '\b`date +%e`\b|$'"
