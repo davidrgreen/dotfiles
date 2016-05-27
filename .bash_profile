@@ -1,3 +1,4 @@
+. /Users/davidgreen/cmds/z/z.sh # Add the Z command
 alias myip='curl ip.appspot.com'
 alias mylocalip='ipconfig getifaddr en1'
 alias proj='cd /Users/davidgreen/Files/projects/current'
