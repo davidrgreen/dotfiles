@@ -24,24 +24,37 @@ alias vstatus='( cd ~/vagrant-local ; vagrant status )'
 # Enhanced WHOIS lookups
 alias whois="whois -h whois.internic.net"
 alias rmdir="rm -rf"
+alias chrome="open -a 'Google Chrome'"
+
+# work commands
+alias meetings='subl /Users/davidgreen/Files/projects/current/10up/meetings.txt --new-window'
+alias t10up='t ls @10up'
+
+alias til='find /Users/davidgreen/Files/til -type f -print0 | xargs -0 grep -li'
+alias bookmarks='cd /Users/davidgreen/Files/'
 
 # git commands
 alias gs="git status"
 alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset%n' --abbrev-commit | cat"
+alias gabandon="git stash save --keep-index;git stash drop"
 
 # Show month's calendar with today highlighted
 alias cal="cal | grep -E --color '\b`date +%e`\b|$'"
 
 # count lines of code in folder and subdirectories
-alias countcode="find . -name '*.php' -o -name '*.js' -o -name '*.css' -o -name '*.html' -o -name '*.js' -not -path "./node_modules" | xargs wc -l"
+alias countcode="find . -name '*.php' -o -name '*.js' -o -name '*.css' -o -name '*.html' -o -name '*.js' -o -name '*.coffee' -not -path "./node_modules" | xargs wc -l"
 
+
+if [ -f ~/.git-completion.bash ]; then
+  . ~/.git-completion.bash
+fi
 
 # todo.txt commands
 
 #PATH=$PATH:"/usr/local/Cellar/todo-txt/2.10/bin"
 
 export TODOTXT_DEFAULT_ACTION=ls
-export TODOTXT_AUTO_ARCHIVE=0
+export TODOTXT_AUTO_ARCHIVE=1
 export TODOTXT_DATE_ON_ADD=0
 #source /usr/local/Cellar/todo-txt/2.10/etc/bash_completion.d/todo_completion complete -F _todo t
 alias t='/usr/local/Cellar/todo-txt/2.10/bin/todo.sh -taf -d $HOME/Dropbox/todo/todo.cfg'
