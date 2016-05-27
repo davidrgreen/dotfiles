@@ -25,7 +25,10 @@ alias vstatus='( cd ~/vagrant-local ; vagrant status )'
 alias whois="whois -h whois.internic.net"
 alias rmdir="rm -rf"
 alias chrome="open -a 'Google Chrome'"
-alias externalbackup="rsync -av ~/Files/ /Volumes/ExternMac/_consolidated/Files/;rsync -av ~/Resources/ /Volumes/ExternMac/_consolidated/Resources/;rsync -av ~/dotfiles/ /Volumes/ExternMac/_consolidated/dotfiles/;rsync -av ~/.ssh/ /Volumes/ExternMac/_consolidated/.ssh/;rsync -av ~/Dropbox/todo/ /Volumes/ExternMac/_consolidated/todo/;"
+
+syncMethod='rsync -av'
+externalHDD='/Volumes/ExternMac/_consolidated/'
+alias externalbackup="${syncMethod} ~/Files/ ${externalHDD}Files/;${syncMethod} ~/Resources/ ${externalHDD}Resources/;${syncMethod} ~/dotfiles/ ${externalHDD}dotfiles/;${syncMethod} ~/.ssh/ ${externalHDD}.ssh/;${syncMethod} ~/Dropbox/todo/ ${externalHDD}todo/;"
 
 # work commands
 alias meetings='subl /Users/davidgreen/Files/projects/current/10up/meetings.txt --new-window'
