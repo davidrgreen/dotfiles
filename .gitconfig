@@ -1,0 +1,8 @@
+[user]
+	name = David Green
+	email = coding@davidrg.com
+[push]
+	default = simple
+[core]
+	excludesfile = ~/.gitignore_global
+	autocrlf = input
