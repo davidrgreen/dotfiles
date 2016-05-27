@@ -1,3 +1,4 @@
+export PATH="/Users/davidgreen/pear/bin:$PATH"
 . /Users/davidgreen/cmds/z/z.sh # Add the Z command
 alias myip='curl ip.appspot.com'
 alias mylocalip='ipconfig getifaddr en1'
