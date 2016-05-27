@@ -1,6 +1,6 @@
 alias myip='curl ip.appspot.com'
 alias mylocalip='ipconfig getifaddr en1'
-alias proj='cd /Users/davidgreen/Projects'
+alias proj='cd /Users/davidgreen/Files/projects/current'
 alias sitesetup='cd /Users/davidgreen/Dropbox/Web-Dev-Backup/_CustomWPSetup/wpdev-jumpstart-script/'
 alias websites='cd /Users/davidgreen/vagrant-local/www'
 alias edit='subl'                           # edit:         Opens any file in sublime editor
