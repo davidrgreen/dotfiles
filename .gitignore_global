@@ -1,0 +1,23 @@
+.tags
+tags
+
+node_modules
+
+# Sublime Text
+####################
+*.sublime-project
+*.sublime-workspace
+
+#sass
+####################
+.sass-cache
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
