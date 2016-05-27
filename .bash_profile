@@ -77,13 +77,12 @@ alias tcommands='ls $HOME/.todo.actions.d'
 mitcolor='\033[1;33m'
 NC='\033[0m' # No Color
 
-#alias hello="cal ; today ; echo '' ; cat $HOME/Dropbox/todo/mit.txt"
 alias hello="cal;upcoming;"
 alias calm="open http://www.calm.com"
 alias goodnight="echo 'Look at todo.txt and create your notecard for tomorrow. Then forget about work for the rest of the day.'"
 
 # Write my MIT (Most Important Task) to mit.txt in Dropbox/todo
-mit () { echo -e "${mitcolor}$@\nIf I do this, and only this, today will be a good day.${NC}" > $HOME/Dropbox/todo/mit.txt; } 
+#mit () { echo -e "${mitcolor}$@\nIf I do this, and only this, today will be a good day.${NC}" > $HOME/Dropbox/todo/mit.txt; }
 
 random_file () {
 	files=(./*)
