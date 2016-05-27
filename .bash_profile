@@ -85,6 +85,10 @@ alias goodnight="echo 'Look at todo.txt and create your notecard for tomorrow. T
 # Write my MIT (Most Important Task) to mit.txt in Dropbox/todo
 mit () { echo -e "${mitcolor}$@\nIf I do this, and only this, today will be a good day.${NC}" > $HOME/Dropbox/todo/mit.txt; } 
 
+random_file () {
+	files=(./*)
+	printf "%s\n" "${files[RANDOM % ${#files[@]}]}"
+}
 
 # Execute hello command whenever terminal is opened
 # Might need to remove it if it interferes with stuff
