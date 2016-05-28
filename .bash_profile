@@ -95,6 +95,14 @@ random_file () {
 	printf "%s\n" "${files[RANDOM % ${#files[@]}]}"
 }
 
+random_quote () {
+	quotesFile='/Users/davidgreen/Files/quotes.txt'
+	whichline=$(cat /Users/davidgreen/Files/quotes.txt | wc -l)
+	let whichline=whichline+1
+	let rand=${RANDOM}%10
+	sed -n "${rand} p" $quotesFile
+}
+
 # Execute hello command whenever terminal is opened
 # Might need to remove it if it interferes with stuff
 hello
