@@ -1,4 +1,5 @@
 syncMethod='rsync -av'
+syncWithSymlinks='rsync -av --copy-links'
 externalHDD='/Volumes/ExternMac/_consolidated/'
 
 if [ ! -d "${externalHDD}" ]; then
@@ -22,7 +23,13 @@ ${syncMethod} ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/TodoTxt/ 
 ${syncMethod} ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/ ${externalHDD}sublime-text/User/;
 
 if [ ! -d "${externalHDD}Code" ]; then
-	# Ensure nested directories exist for Sublime Text
+	# Ensure the Code directory exists before backing up subdirectories to it.
 	mkdir "${externalHDD}Code"
 fi
 ${syncMethod} ~/Code/snippets/ ${externalHDD}Code/snippets/
+
+if [ ! -d "${externalHDD}Code/projects" ]; then
+	# Ensure the Code/projects directory exists before backing up subdirectories to it.
+	mkdir "${externalHDD}Code/projects"
+fi
+${syncWithSymlinks} ~/dotfiles/projects/ ${externalHDD}Code/projects/
