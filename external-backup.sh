@@ -13,6 +13,8 @@ ${syncMethod} ~/Resources/ ${externalHDD}Resources/
 ${syncMethod} ~/dotfiles/ ${externalHDD}dotfiles/
 ${syncMethod} ~/.ssh/ ${externalHDD}.ssh/
 ${syncMethod} ~/Dropbox/todo/ ${externalHDD}todo/
+${syncMethod} ~/Movies/ ${externalHDD}Movies/
+${syncMethod} ~/TV/ ${externalHDD}TV/
 
 if [ ! -d "${externalHDD}sublime-text/Packages/TodoTxt/" ]; then
 	# Ensure nested directories exist for Sublime Text
