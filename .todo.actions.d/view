@@ -129,7 +129,8 @@ function date_view() {
         #  Use core _list function, does numbering and colouring for us
         DATE_LIST=$(_list "$TODO_FILE" "due:$date" "$term" | sed 's/\(^due:\|\ *due:\)[0-9-]*\ */ /g')
         if [ -n "${DATE_LIST}" ]; then
-            echo  "---  $date  ---"
+            date_display=$(date -j -f "%Y-%m-%d" $date "+%A, %Y-%m-%d")
+            echo  "---  $date_display  ---"
             echo  "${DATE_LIST}"
             echo  ""
         fi
