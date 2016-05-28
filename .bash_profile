@@ -32,7 +32,7 @@ alias ..5='cd ../../../../..'
 
 syncMethod='rsync -av'
 externalHDD='/Volumes/ExternMac/_consolidated/'
-alias externalbackup="${syncMethod} ~/Files/ ${externalHDD}Files/;${syncMethod} ~/Resources/ ${externalHDD}Resources/;${syncMethod} ~/dotfiles/ ${externalHDD}dotfiles/;${syncMethod} ~/.ssh/ ${externalHDD}.ssh/;${syncMethod} ~/Dropbox/todo/ ${externalHDD}todo/;"
+alias externalbackup="${syncMethod} ~/Files/ ${externalHDD}Files/;${syncMethod} ~/Resources/ ${externalHDD}Resources/;${syncMethod} ~/dotfiles/ ${externalHDD}dotfiles/;${syncMethod} ~/.ssh/ ${externalHDD}.ssh/;${syncMethod} ~/Dropbox/todo/ ${externalHDD}todo/;${syncMethod} ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/ ${externalHDD}sublime-text/User/;"
 
 # work commands
 alias meetings='subl /Users/davidgreen/Files/projects/current/10up/meetings.txt --new-window'
