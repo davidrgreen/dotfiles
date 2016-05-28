@@ -1,5 +1,5 @@
-syncMethod='rsync -av'
-syncWithSymlinks='rsync -av --copy-links'
+syncMethod='rsync -av --exclude node_modules'
+syncWithSymlinks='rsync -av --copy-links --exclude node_modules'
 externalHDD='/Volumes/ExternMac/_consolidated/'
 
 if [ ! -d "${externalHDD}" ]; then
