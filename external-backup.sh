@@ -20,3 +20,9 @@ if [ ! -d "${externalHDD}sublime-text/Packages/TodoTxt/" ]; then
 fi
 ${syncMethod} ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/TodoTxt/ ${externalHDD}sublime-text/Packages/TodoTxt/
 ${syncMethod} ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/ ${externalHDD}sublime-text/User/;
+
+if [ ! -d "${externalHDD}Code" ]; then
+	# Ensure nested directories exist for Sublime Text
+	mkdir "${externalHDD}Code"
+fi
+${syncMethod} ~/Code/snippets/ ${externalHDD}Code/snippets/
