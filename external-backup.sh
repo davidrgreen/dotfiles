@@ -6,6 +6,7 @@ if [ ! -d "${externalHDD}" ]; then
 	exit
 fi
 
+# Ensure all destinations(the second argument) end with a trailing slash. Otherwise the folders being backed up will be made subdirectories of the destination.
 ${syncMethod} ~/Files/ ${externalHDD}Files/
 ${syncMethod} ~/Resources/ ${externalHDD}Resources/
 ${syncMethod} ~/dotfiles/ ${externalHDD}dotfiles/
