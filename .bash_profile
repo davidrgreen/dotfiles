@@ -25,6 +25,10 @@ alias vstatus='( cd ~/vagrant-local ; vagrant status )'
 alias whois="whois -h whois.internic.net"
 alias rmdir="rm -rf"
 alias chrome="open -a 'Google Chrome'"
+alias ..2='cd ../..'
+alias ..3='cd ../../..'
+alias ..4='cd ../../../..'
+alias ..5='cd ../../../../..'
 
 syncMethod='rsync -av'
 externalHDD='/Volumes/ExternMac/_consolidated/'
