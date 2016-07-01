@@ -285,6 +285,7 @@ countdown()
   IFS=:
   set -- $*
   secs=$(( ${1#0} * 3600 + ${2#0} * 60 + ${3#0} ))
+  echo "Starting countdown: $(date)"
   while [ $secs -gt 0 ]
   do
     sleep 1 &
@@ -293,6 +294,7 @@ countdown()
     wait
   done
   echo
+  echo "Countdown finished: $(date)"
   say "Timer finished"
 )
 
@@ -300,6 +302,7 @@ stopwatch()
 (
   IFS=:
   secs=0
+  echo "Starting stopwatch: $(date)"
   while [ 1 ]
   do
     sleep 1 &
