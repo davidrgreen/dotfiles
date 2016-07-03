@@ -320,7 +320,7 @@ stopwatch()
 # Install ffmpeg from http://www.ffmpegmac.net/ and move the zip contents to /use/local/bin
 function get-mp3() {
   if [ $# -eq 0 ]; then
-      print "Please enter a video url: get-audio <youtube-link>"
+      echo "Please enter a video url: get-audio <youtube-link>"
   else
     youtube-dl --extract-audio --audio-format mp3 $1
   fi
@@ -328,7 +328,7 @@ function get-mp3() {
 
 function get-mp3-playlist() {
   if [ $# -eq 0 ]; then
-      print "Please enter a playlist url: get-mp4-playlist <youtube-link>"
+      echo "Please enter a playlist url: get-mp3-playlist <youtube-link>"
   else
     youtube-dl -o '%(playlist)s/%(playlist_index)s - %(title)s.%(ext)s' --extract-audio --audio-format mp3 $1
   fi
@@ -336,7 +336,7 @@ function get-mp3-playlist() {
 
 function get-mp4() {
   if [ $# -eq 0 ]; then
-      print "Please enter a video url: get-audio <youtube-link>"
+      echo "Please enter a video url: get-audio <youtube-link>"
   else
     youtube-dl -f bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best $1
   fi
@@ -344,7 +344,7 @@ function get-mp4() {
 
 function get-mp4-playlist() {
   if [ $# -eq 0 ]; then
-      print "Please enter a playlist url: get-mp4-playlist <youtube-link>"
+      echo "Please enter a playlist url: get-mp4-playlist <youtube-link>"
   else
     youtube-dl -o '%(playlist)s/%(playlist_index)s - %(title)s.%(ext)s' -f bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best $1
   fi
