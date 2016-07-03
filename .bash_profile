@@ -330,7 +330,7 @@ function get-mp3-playlist() {
   if [ $# -eq 0 ]; then
       echo "Please enter a playlist url: get-mp3-playlist <youtube-link>"
   else
-    youtube-dl -o '%(playlist)s/%(playlist_index)s - %(title)s.%(ext)s' --extract-audio --audio-format mp3 $1
+    youtube-dl -i -o '%(playlist)s/%(playlist_index)s - %(title)s.%(ext)s' --extract-audio --audio-format mp3 $1
   fi
 }
 
@@ -346,6 +346,6 @@ function get-mp4-playlist() {
   if [ $# -eq 0 ]; then
       echo "Please enter a playlist url: get-mp4-playlist <youtube-link>"
   else
-    youtube-dl -o '%(playlist)s/%(playlist_index)s - %(title)s.%(ext)s' -f bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best $1
+    youtube-dl -i -o '%(playlist)s/%(playlist_index)s - %(title)s.%(ext)s' -f bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best $1
   fi
 }
