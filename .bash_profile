@@ -295,7 +295,7 @@ countdown()
   done
   echo
   echo "Countdown finished: $(date)"
-  say "Timer finished"
+  say -v "Pipe Organ" "Time is up; move along."
 )
 
 stopwatch()
