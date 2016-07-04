@@ -99,8 +99,10 @@ random_file () {
 random () {
 	randomFile='/Users/davidgreen/Files/quotes.txt'
 	if [ "$1" = 'verse' ]; then
-		randomFile='/Users/davidgreen/Files/verses.txt'
-	fi
+    randomFile='/Users/davidgreen/Files/verses.txt'
+  elif [ "$1" = 'exercise' ]; then
+    randomFile='/Users/davidgreen/Files/exercises.txt'
+  fi
 
 	whichline=$(cat $randomFile | wc -l)
 	let whichline=whichline+1
