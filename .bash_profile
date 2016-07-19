@@ -1,4 +1,6 @@
-export PATH="/Users/davidgreen/pear/bin:$PATH"
+export NODE_PATH="/usr/local/lib/node_modules/:/Users/davidgreen/Code/10up/xylem/offline/app/offline/app/assets/js/vendor:$NODE_PATH"
+# Need to have done mkdir ~/.npm-global && npm config set prefix '~/.npm-global' first.
+export PATH="/Users/davidgreen/pear/bin:/Users/davidgreen/.npm-global/bin:$PATH"
 . /Users/davidgreen/cmds/z/z.sh # Add the Z command
 alias myip='curl ip.appspot.com'
 alias mylocalip='ipconfig getifaddr en1'
