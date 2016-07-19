@@ -14,6 +14,7 @@ ${syncMethod} ~/dotfiles/ ${externalHDD}dotfiles/
 ${syncMethod} ~/.ssh/ ${externalHDD}.ssh/
 ${syncMethod} ~/Dropbox/todo/ ${externalHDD}todo/
 ${syncMethod} ~/Movies/ ${externalHDD}Movies/
+${syncMethod} ~/Music/ ${externalHDD}Music/
 ${syncMethod} ~/TV/ ${externalHDD}TV/
 
 if [ ! -d "${externalHDD}sublime-text/Packages/TodoTxt/" ]; then
@@ -35,3 +36,9 @@ if [ ! -d "${externalHDD}Code/projects" ]; then
 	mkdir "${externalHDD}Code/projects"
 fi
 ${syncWithSymlinks} ~/dotfiles/projects/ ${externalHDD}Code/projects/
+
+if [ ! -d "${externalHDD}CodeTools" ]; then
+	# Ensure the Code directory exists before backing up subdirectories to it.
+	mkdir "${externalHDD}CodeTools"
+fi
+${syncMethod} ~/CodeTools/ ${externalHDD}CodeTools/
