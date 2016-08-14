@@ -353,3 +353,13 @@ function get-mp4-playlist() {
     youtube-dl -i -o '%(playlist)s/%(playlist_index)s - %(title)s.%(ext)s' -f bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best $1
   fi
 }
+
+# Read a file that has a list of URLs. Entries are entered as a pair of lines:
+# the first line is the name/description and the next line is a valid URL.
+function open-session() {
+  if [ $# -eq 0 ]; then
+      echo "Please enter a filename: open-session <file.txt>"
+  else
+    awk 'NR % 2 == 0' $1 | xargs open
+  fi
+}
