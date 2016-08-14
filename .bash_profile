@@ -51,7 +51,7 @@ alias gsub="git submodule init && git submodule update"
 alias cal="cal | grep -E --color '\b`date +%e`\b|$'"
 
 # count lines of code in folder and subdirectories
-alias countcode="find . -name '*.php' -o -name '*.js' -o -name '*.css' -o -name '*.html' -o -name '*.js' -o -name '*.coffee' -not -path "./node_modules" | xargs wc -l"
+alias countcode="find . -name '*.php' -o -name '*.css' -o -name '*.html' -o -name '*.js' -o -name '*.coffee' -not -path "./node_modules" | xargs wc -l"
 
 
 if [ -f ~/.git-completion.bash ]; then
