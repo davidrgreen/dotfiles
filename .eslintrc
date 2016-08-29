@@ -173,7 +173,14 @@
 		"space-before-function-paren": [2, "never"],
 		"space-in-parens": [2, "always"],
 		"space-infix-ops": [2],
-		"space-unary-ops": [2],
+		"space-unary-ops": [1, {
+			"words":true,
+			"nonwords": false,
+			"overrides": {
+				"!": true
+				}
+			}
+		],
 		"strict": [2, "function"],
 		"use-isnan": [2],
 		"valid-jsdoc": [2],
