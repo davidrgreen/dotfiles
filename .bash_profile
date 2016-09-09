@@ -37,6 +37,9 @@ alias externalbackup='~/dotfiles/external-backup.sh'
 # work commands
 alias meetings='subl /Users/davidgreen/Files/projects/current/10up/meetings.txt --new-window'
 alias t10up='t ls @10up'
+alias phpcs-third='phpcs --standard=10up-Third-Party'
+alias phpcs-10up='phpcs --standard=10up-Code-Review'
+alias phpcs-vip='phpcs --standard=WordPress-VIP'
 
 alias til='find /Users/davidgreen/Files/til -type f -print0 | xargs -0 grep -li'
 alias bookmarks='cd /Users/davidgreen/Files/'
