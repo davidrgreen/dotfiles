@@ -8,6 +8,9 @@ node_modules
 *.sublime-project
 *.sublime-workspace
 
+# VS Code
+.vscode
+
 #sass
 ####################
 .sass-cache
