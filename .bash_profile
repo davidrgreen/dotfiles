@@ -8,6 +8,7 @@ export ANDROID_HOME="/Users/davidgreen/CodeTools/Android/"
 # export ANDROID_HOME="/usr/local/Caskroom/android-sdk/25.2.3"
 export PATH="/Users/davidgreen/pear/bin:/Users/davidgreen/.npm-global/bin:/usr/local/php5/bin:$ANDROID_HOME/tools/:$PATH"
 . /Users/davidgreen/cmds/z/z.sh # Add the Z command
+alias itried='open https://youtu.be/MD1neU19ktg?t=37s'
 alias myip='curl ip.appspot.com'
 alias mylocalip='ipconfig getifaddr en1'
 alias proj='cd /Users/davidgreen/Files/projects/current'
