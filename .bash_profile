@@ -48,6 +48,7 @@ alias t10up='t ls @10up'
 alias phpcs-third='phpcs --standard=10up-Third-Party'
 alias phpcs-10up='phpcs --standard=10up-Code-Review'
 alias phpcs-vip='phpcs --standard=WordPress-VIP'
+alias wpcore='code /Users/davidgreen/vagrant-local/www/wordpress-default'
 
 alias til='find /Users/davidgreen/Files/til -type f -print0 | xargs -0 grep -li'
 alias bookmarks='cd /Users/davidgreen/Files/'
