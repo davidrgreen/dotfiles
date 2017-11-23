@@ -55,15 +55,17 @@ alias bookmarks='cd /Users/davidgreen/Files/'
 
 # git commands
 alias gs="git status"
-alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset%n' --abbrev-commit | cat"
+alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'"
 alias gabandon="git stash save --keep-index;git stash drop"
 alias gsub="git submodule init && git submodule update"
+alias devcommitcount="git shortlog | grep -E '^[^ ]'"
+alias commitcount="git shortlog | grep -E '^[ ]+\w+' | wc -l"
 
 # Show month's calendar with today highlighted
 alias cal="cal | grep -E --color '\b`date +%e`\b|$'"
 
 # count lines of code in folder and subdirectories
-alias countcode="find . -name '*.php' -o -name '*.css' -o -name '*.html' -o -name '*.js' -o -name '*.coffee' -not -path "./node_modules" | xargs wc -l"
+alias countcode="find . -name '*.php' -o -name '*.css' -o -name '*.html' -o -name '*.js' -o -name '*.coffee' -not -path "node_modules" | xargs wc -l"
 
 
 if [ -f ~/.git-completion.bash ]; then
@@ -374,4 +376,39 @@ function open-session() {
   else
     awk 'NR % 2 == 0' $1 | xargs open
   fi
+}
+
+# Check out a Git branch, tag it with archive/, remove
+# the remote branch, and get ready to do it all over again.
+#
+# USAGE:
+#  garchive feature/my-branch
+function garchive() {
+  if [[ "$1" == "master" ]]; then
+    echo "I'm sorry, $USER. I'm afraid I can't do that. (Cannot archive master branch)"
+    return
+  fi
+
+  git checkout "$1" \
+  && git pull \
+  && git tag archive/"$1" && echo "Tag created: archive/$1" \
+  && git push origin archive/"$1" && echo "Tag pushed to origin" \
+  && git push origin "$1" --delete && echo "Removed remote branch $1" \
+  && git checkout master && git branch -d "$1"
+}
+
+__git_complete garchive _git_checkout
+
+# Run through archive-branch in a loop, useful for archiving a *bunch* of
+# merged branches in a repo.
+#
+# USAGE:
+#   archive-branches fix/my-fix feature/some-feature
+function archive-branches() {
+  echo "Archiving Git branches:"
+  echo ""
+  for branch in "$@"; do
+    echo "Running archive-branch $branch:"
+    garchive "$branch"
+  done
 }
