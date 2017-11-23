@@ -16,6 +16,7 @@ ${syncMethod} ~/Dropbox/todo/ ${externalHDD}todo/
 ${syncMethod} ~/Movies/ ${externalHDD}Movies/
 ${syncMethod} ~/Music/ ${externalHDD}Music/
 ${syncMethod} ~/TV/ ${externalHDD}TV/
+crontab -l > ${externalHDD}cron-backup.txt
 
 if [ ! -d "${externalHDD}sublime-text/Packages/TodoTxt/" ]; then
 	# Ensure nested directories exist for Sublime Text
