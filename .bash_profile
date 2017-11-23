@@ -38,6 +38,7 @@ alias ..2='cd ../..'
 alias ..3='cd ../../..'
 alias ..4='cd ../../../..'
 alias ..5='cd ../../../../..'
+alias editlocalhost='sudo subl /Library/WebServer/Documents/index.html.en'
 
 alias externalbackup='~/dotfiles/external-backup.sh'
 
