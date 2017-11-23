@@ -1,3 +1,4 @@
+export SVN_EDITOR=vim
 export NODE_PATH="/usr/local/lib/node_modules/:/Users/davidgreen/Code/10up/xylem/offline/app/offline/app/assets/js/vendor:$NODE_PATH"
 # .npm-global requires the following be done first: mkdir ~/.npm-global && npm config set prefix '~/.npm-global'
 # PHP5/bin path needed after updating PHP using curl -s http://php-osx.liip.ch/install.sh | bash -s 5.6
