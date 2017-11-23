@@ -2,7 +2,11 @@ export SVN_EDITOR=vim
 export NODE_PATH="/usr/local/lib/node_modules/:/Users/davidgreen/Code/10up/xylem/offline/app/offline/app/assets/js/vendor:$NODE_PATH"
 # .npm-global requires the following be done first: mkdir ~/.npm-global && npm config set prefix '~/.npm-global'
 # PHP5/bin path needed after updating PHP using curl -s http://php-osx.liip.ch/install.sh | bash -s 5.6
-export PATH="/Users/davidgreen/pear/bin:/Users/davidgreen/.npm-global/bin:/usr/local/php5/bin:$PATH"
+# export PATH="/Users/davidgreen/pear/bin:/Users/davidgreen/.npm-global/bin:/usr/local/php5/bin:/Users/davidgreen/Library/Android/sdk/tools:/Users/davidgreen/Library/Android/sdk/platform-tools:$PATH"
+#export ANDROID_HOME="/Users/davidgreen/Library/Android/sdk/"
+export ANDROID_HOME="/Users/davidgreen/CodeTools/Android/"
+# export ANDROID_HOME="/usr/local/Caskroom/android-sdk/25.2.3"
+export PATH="/Users/davidgreen/pear/bin:/Users/davidgreen/.npm-global/bin:/usr/local/php5/bin:$ANDROID_HOME/tools/:$PATH"
 . /Users/davidgreen/cmds/z/z.sh # Add the Z command
 alias myip='curl ip.appspot.com'
 alias mylocalip='ipconfig getifaddr en1'
