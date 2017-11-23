@@ -318,7 +318,7 @@ countdown()
   done
   echo
   echo "Countdown finished: $(date)"
-  say -v "Pipe Organ" "Time is up; move along."
+  say -v "Daniel" "Time is up; move along."
 )
 
 stopwatch()
