@@ -94,8 +94,13 @@ alias tviewproj='t view project'
 alias tcon='t listcon'
 alias tedit='edit $HOME/Dropbox/todo/todo.txt'
 alias teditdone='edit $HOME/Dropbox/todo/done.txt'
-alias tcommands='ls $HOME/.todo.actions.d'
+alias tcommands='ls $HOME/dotfiles/.todo.actions.d'
 
+alias tt='/usr/local/Cellar/todo-txt/2.10/bin/todo.sh -taf -d $HOME/Dropbox/todo-work/todo.cfg'
+alias work='tt'
+alias workedit='edit $HOME/Dropbox/todo-work/todo.txt'
+alias workeditdone='edit $HOME/Dropbox/todo-work/done.txt'
+alias workxp='work xp -o 7'
 
 mitcolor='\033[1;33m'
 NC='\033[0m' # No Color
