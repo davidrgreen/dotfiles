@@ -13,9 +13,11 @@ ${syncMethod} ~/Resources/ ${externalHDD}Resources/
 ${syncMethod} ~/dotfiles/ ${externalHDD}dotfiles/
 ${syncMethod} ~/.ssh/ ${externalHDD}.ssh/
 ${syncMethod} ~/Dropbox/todo/ ${externalHDD}todo/
+${syncMethod} ~/Dropbox/todo-work/ ${externalHDD}todo-work/
 ${syncMethod} ~/Movies/ ${externalHDD}Movies/
 ${syncMethod} ~/Music/ ${externalHDD}Music/
 ${syncMethod} ~/TV/ ${externalHDD}TV/
+${syncMethod} ~/MyTools/ ${externalHDD}MyTools/
 crontab -l > ${externalHDD}cron-backup.txt
 
 if [ ! -d "${externalHDD}sublime-text/Packages/TodoTxt/" ]; then
@@ -26,17 +28,21 @@ fi
 ${syncMethod} ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/TodoTxt/ ${externalHDD}sublime-text/Packages/TodoTxt/
 ${syncMethod} ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/ ${externalHDD}sublime-text/User/;
 
+${syncMethod} ~/Library/Application\ Support/Code/User/ ${externalHDD}visual-studio-code/User/;
+${syncMethod} /Users/davidgreen/.vscode/extensions/davidtodo/ ${externalHDD}visual-studio-code/extensions/davidtodo;
+
 if [ ! -d "${externalHDD}Code" ]; then
 	# Ensure the Code directory exists before backing up subdirectories to it.
 	mkdir "${externalHDD}Code"
 fi
-${syncMethod} ~/Code/snippets/ ${externalHDD}Code/snippets/
+#${syncMethod} ~/Code/snippets/ ${externalHDD}Code/snippets/
+${syncMethod} ~/Code/ ${externalHDD}Code/
 
-if [ ! -d "${externalHDD}Code/projects" ]; then
+#if [ ! -d "${externalHDD}Code/projects" ]; then
 	# Ensure the Code/projects directory exists before backing up subdirectories to it.
-	mkdir "${externalHDD}Code/projects"
-fi
-${syncWithSymlinks} ~/dotfiles/projects/ ${externalHDD}Code/projects/
+#	mkdir "${externalHDD}Code/projects"
+#fi
+#${syncWithSymlinks} ~/dotfiles/projects/ ${externalHDD}Code/projects
 
 if [ ! -d "${externalHDD}CodeTools" ]; then
 	# Ensure the Code directory exists before backing up subdirectories to it.
